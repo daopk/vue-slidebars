@@ -1,18 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="./assets/logo.png" @click="show = true">
+    <p>Click the Logo to show the slidebar</p>
+    <SlideBars v-model="show" position="left">
+      <ul>
+        <li>Menu 1</li>
+        <li>Menu 2</li>
+      </ul>
+    </SlideBars>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SlideBars from './components/slidebars.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
+    SlideBars
+  },
+  data: () => ({
+    show: false
+  })
 }
 </script>
 

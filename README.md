@@ -1,29 +1,37 @@
 # vue-slidebars
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+## Usage
+```html
+<template>
+    <div id="app">
+        <SlideBars v-model="show" position="left">
+            Put your menu here
+        </SlideBars>
+    </div>
+</template>
 ```
 
-### Run your tests
-```
-npm run test
-```
+```javascript
+import SlideBars from "vue-slidebars";
 
-### Lints and fixes files
-```
-npm run lint
+export default {
+    components: {
+        SlideBars
+    },
+    data() {
+        return {
+            show: true
+        }
+    }
+}
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+| Attribute      | Type    | Required | Default value | Note              |
+|----------------|---------|----------|---------------|-------------------|
+| value          | Boolean | yes      | false         |                   |
+| width          | Number  |          | 340           |                   |
+| bgColor        | String  |          | "#313131"     |                   |
+| transitionTime | Number  |          | 300           | milliseconds      |
+| position       | String  |          | "left"        | "left" or "right" |
