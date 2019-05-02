@@ -1,5 +1,5 @@
 <template>
-  <div class="slidebars" v-show="value || visible">
+  <div class="slidebars">
     <div class="slidebars-content" :style="slidebarsLeftStyle">
       <slot></slot>
     </div>

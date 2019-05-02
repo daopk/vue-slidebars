@@ -4,7 +4,7 @@
   "author": {
     "name": "daofresh"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "main": "./dist/slidebars.common.js",
   "scripts": {
